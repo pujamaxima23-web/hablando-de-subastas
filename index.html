@@ -75,6 +75,17 @@
   .gallery img{animation:kb 14s ease-in-out infinite alternate}
   @keyframes kb{to{transform:scale(1.08)}}
 
+  .logo{justify-self:start;background:#fff;border-radius:14px;padding:10px 14px;border:1px solid var(--line)}
+  .logo img{display:block;width:180px;max-width:100%;height:auto}
+
+  .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 16px;display:grid;gap:6px;align-content:start;transition:transform .25s}
+  .card:hover{transform:translateY(-3px)}
+  .card .ico{font-size:1.4rem;line-height:1}
+  .card h3{font-family:var(--display);font-size:1.05rem;margin:0}
+  .card p{font-size:.9rem;color:var(--muted)}
+  @media (max-width:620px){.cards{grid-template-columns:1fr}}
+
   .final{padding-block:24px 64px;display:grid;gap:14px;justify-items:start}
   footer{padding-block:0 32px;color:var(--muted);font-size:.85rem}
 
@@ -86,6 +97,7 @@
 <div class="glow g1"></div><div class="glow g2"></div>
 <div class="wrap">
   <header>
+    <div class="logo rise d1"><img src="media/nc-auto-import-logo.png" alt="NC Auto Import — Calidad y transparencia"></div>
     <div class="tags rise d1">
       <span class="pill">Edición 2.0</span>
       <span class="pill"><span class="dot"></span>Cupos limitados</span>
@@ -106,6 +118,15 @@
       <span aria-hidden="true">Cuánto pujar</span><span aria-hidden="true">Costos reales</span><span aria-hidden="true">Depurar un carro</span><span aria-hidden="true">Cuándo comprar</span>
     </div>
   </div>
+
+  <section>
+    <h2>De qué vamos a hablar</h2>
+    <div class="cards">
+      <div class="card"><span class="ico" aria-hidden="true">🔨</span><h3>Cómo pujar sin perder</h3><p>Copart e IAA: qué mirar en el lote y hasta dónde llegar.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true">🚢</span><h3>Costos reales a RD</h3><p>Flete, aduana y depuración. Los números claros, sin sorpresas.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true">🎤</span><h3>Speakers invitados</h3><p>Gente del negocio compartiendo sus experiencias: lo que les salió bien y lo que no.</p></div>
+    </div>
+  </section>
 
   <section>
     <h2>Así fue la primera edición</h2>
