@@ -8,10 +8,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#050608; --card:#0b1626; --card2:#0e1d33; --line:#1d2b44;
-    --fg:#ffffff; --muted:#c9cfd8; --accent:#ff6a00; --on-accent:#050608;
+    --bg:#ffffff; --card:#f4f7fd; --card2:#eaf0fb; --line:#d9e2f3;
+    --fg:#0d1b3d; --muted:#4a5878; --accent:#1f4fa3; --on-accent:#ffffff;
     --display:Montserrat,system-ui,sans-serif; --body:Manrope,system-ui,sans-serif;
-    color-scheme:dark;
+    color-scheme:light;
   }
   *{box-sizing:border-box}
   html,body{margin:0;overflow-x:clip}
@@ -21,10 +21,10 @@
   .wrap{max-width:640px;margin:0 auto;padding-inline:max(20px,env(safe-area-inset-left,0px))}
 
   .top{border-bottom:1px solid var(--line);padding-block:18px;display:flex;justify-content:center}
-  .top img{display:block;width:150px;height:auto;filter:brightness(0) invert(1)}
+  .top img{display:block;width:150px;height:auto}
 
   .hero{position:relative;text-align:center;padding-block:44px 28px;display:grid;gap:16px}
-  .hero::before{content:"";position:absolute;inset:-40px 0 auto;height:260px;background:radial-gradient(closest-side,rgba(255,106,0,.22),transparent);z-index:-1;pointer-events:none}
+  .hero::before{content:"";position:absolute;inset:-40px 0 auto;height:260px;background:radial-gradient(closest-side,rgba(31,79,163,.12),transparent);z-index:-1;pointer-events:none}
   .eyebrow{font-family:var(--display);font-weight:800;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
   h1{font-size:clamp(2rem,7.5vw,3rem);line-height:1.1}
   h1 em{font-style:normal;color:var(--accent)}
@@ -35,9 +35,9 @@
   .info .row{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 28px}
   .info .hl{color:var(--accent)}
 
-  .btn{display:block;width:100%;text-align:center;background:var(--accent);color:var(--on-accent);font-family:var(--display);font-weight:800;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:20px 24px;border-radius:12px;box-shadow:0 10px 30px -10px rgba(255,106,0,.6);transition:transform .2s,box-shadow .2s}
-  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px -10px rgba(255,106,0,.8)}
-  .btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+  .btn{display:block;width:100%;text-align:center;background:var(--accent);color:var(--on-accent);font-family:var(--display);font-weight:800;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:20px 24px;border-radius:12px;box-shadow:0 10px 30px -10px rgba(31,79,163,.55);transition:transform .2s,box-shadow .2s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 34px -10px rgba(31,79,163,.75)}
+  .btn:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
 
   section{padding-block:36px;display:grid;gap:18px}
   h2{font-size:1.45rem;line-height:1.2}
@@ -58,7 +58,7 @@
   .close a{color:var(--accent);text-decoration:none}
   .close a:hover{text-decoration:underline}
 
-  footer{margin-top:24px;background:#0a1730;color:var(--muted);text-align:center;font-size:.85rem;padding:28px 20px}
+  footer{margin-top:24px;background:var(--card);border-top:1px solid var(--line);color:var(--muted);text-align:center;font-size:.85rem;padding:28px 20px}
 
   @media (prefers-reduced-motion: reduce){*{transition:none!important}}
 </style>
